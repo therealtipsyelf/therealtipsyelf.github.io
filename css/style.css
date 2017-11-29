@@ -46,14 +46,15 @@ a {
     margin-bottom: 4.0rem;
     
     img {
-        width: 100px;
+        width: 45%;
+        height: auto;
         margin: 0 auto;
     }
 
     @media (min-width: 568px) {
         img {
             width: 80%;
-            max-width: 550px;
+            max-width: 450px;
             margin: 0 auto;
         }    
     }
@@ -73,22 +74,30 @@ a {
 
 .twitter {
     color: #E4002E;
-    animation: blink-animation 2s steps(5, start) infinite;
-      -webkit-animation: blink-animation 2s steps(5, start) infinite;
+    animation: blink-animation 2s steps(2, start) infinite;
+      -webkit-animation: blink-animation 2s steps(2, start) infinite;
 }
 
 @keyframes blink-animation {
-  to {
-    color: green;
-  }
+    0%   { color: #E4002E; }
+    49% { color: #E4002E; }
+    50% { color: #a7d161; }
+    99% { color: #a7d161; }
+    100% { color: #E4002E; }
+
+ 
 }
 @-webkit-keyframes blink-animation {
-  to {
-    color: green;
-  }
+        0%   { color: #E4002E; }
+49% { color: #E4002E; }
+50% { color: #a7d161; }
+99% { color: #a7d161; }
+100% { color:#E4002E; }
+
 }
 
 .content {
+    width: 80%;
     max-width: 500px;
     margin: 0 auto 4.0rem auto;
     text-align: center;
@@ -122,5 +131,10 @@ a {
     padding: .5rem 2.0rem;
     color: #F9F5E9;
     text-decoration: none;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background: #A7D161;
+    }
     
 }
